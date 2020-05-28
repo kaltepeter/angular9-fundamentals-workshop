@@ -14,7 +14,18 @@ export class CoursesComponent implements OnInit {
 
   ngOnInit(): void {
     this.resetSelectedCourse();
-    this.courses = this.coursesService.all();
+    this.loadCourses();
+  }
+
+  loadCourses() {
+    this.courses = this.coursesService
+      .all()
+      .subscribe((courses) => (this.courses = courses));
+  }
+
+  refreshCourses() {
+    this.resetSelectedCourse();
+    this.loadCourses();
   }
 
   formatLabel(value: number) {
@@ -36,7 +47,9 @@ export class CoursesComponent implements OnInit {
   }
 
   deleteCourse(courseId) {
-    this.coursesService.delete(courseId);
+    this.coursesService
+      .delete(courseId)
+      .subscribe((res) => this.refreshCourses());
   }
 
   cancel() {
@@ -45,9 +58,9 @@ export class CoursesComponent implements OnInit {
 
   saveCourse(course) {
     if (course.id) {
-      this.coursesService.update(course);
+      this.coursesService.update(course).subscribe((res) => this.refreshCourses());
     } else {
-      this.coursesService.create(course);
+      this.coursesService.create(course).subscribe((res) => this.refreshCourses());
     }
   }
 }

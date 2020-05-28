@@ -6,6 +6,20 @@
       "description": "Learn the fundamentals of Angular 9",
       "percentComplete": 26,
       "favorite": true
+    },
+    {
+      "id": 2,
+      "title": "new course",
+      "description": "yo",
+      "percentComplete": 0,
+      "favorite": false
+    },
+    {
+      "id": 3,
+      "title": "test new",
+      "description": "kjsk",
+      "percentComplete": 0,
+      "favorite": false
     }
   ]
 }
