@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CoursesComponent } from './courses/courses.component';
 import { FormsModule } from '@angular/forms';
 import { CoursesListComponent } from './courses/courses-list/courses-list.component';
+import { CourseDetailsComponent } from './courses/course-details/course-details.component';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { CoursesListComponent } from './courses/courses-list/courses-list.compon
     AppComponent,
     HomeComponent,
     CoursesComponent,
-    CoursesListComponent
+    CoursesListComponent,
+    CourseDetailsComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
