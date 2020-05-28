@@ -11,6 +11,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { FormsModule } from '@angular/forms';
 import { CoursesListComponent } from './courses/courses-list/courses-list.component';
 import { CourseDetailsComponent } from './courses/course-details/course-details.component';
+import { LessonsListComponent } from './lessons/lessons-list/lessons-list.component';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { CourseDetailsComponent } from './courses/course-details/course-details.
     HomeComponent,
     CoursesComponent,
     CoursesListComponent,
-    CourseDetailsComponent
+    CourseDetailsComponent,
+    LessonsListComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
