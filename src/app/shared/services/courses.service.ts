@@ -8,22 +8,6 @@ const BASE_URL = 'http://localhost:3000/';
 })
 export class CoursesService {
   private model = 'courses';
-  private courses = [
-    {
-      id: 1,
-      title: 'Angular 9 Fundamentals!!',
-      description: 'Learn the fundamentals of Angular 9',
-      percentComplete: 26,
-      favorite: true,
-    },
-    {
-      id: 2,
-      title: 'Javascript the Really REALLY HARD PARTS',
-      description: 'Worship Will Sentance',
-      percentComplete: 50,
-      favorite: true,
-    },
-  ];
 
   constructor(private http: HttpClient) {}
 
